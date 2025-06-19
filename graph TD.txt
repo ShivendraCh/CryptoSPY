@@ -1,0 +1,54 @@
+graph TD
+    subgraph "Frontend"
+        UI["UI (Dark Mode)"] --> APIClient["API Client"] 
+    end
+    
+    subgraph "Backend (FastAPI)"
+        APIEndpoints["API Endpoints"] --> Services["Business Services"]
+        Services --> BlockchainServices["Blockchain Services"]
+        Services --> AnalysisServices["Analysis Services"]
+        Services --> CaseManagement["Case Management"]
+        Services --> ReportGeneration["Report Generation"]
+        
+        BlockchainServices --> ETH["Ethereum"]
+        BlockchainServices --> BTC["Bitcoin"]
+        BlockchainServices --> BSC["BSC"]
+        BlockchainServices --> SOL["Solana"]
+        BlockchainServices --> POLY["Polygon"]
+        BlockchainServices --> XMR["Monero (if possible)"]
+        
+        AnalysisServices --> RiskScoring["Risk Scoring"]
+        AnalysisServices --> FlowGraph["Flow Graph"]
+        AnalysisServices --> Timeline["Timeline"]
+        AnalysisServices --> Heatmap["Heatmap"]
+        AnalysisServices --> WalletTagging["Wallet Tagging"]
+        AnalysisServices --> WalletTracking["Wallet Tracking"]
+    end
+    
+    subgraph "ML Models"
+        ModelLoader["Model Loader (GPU/CPU)"] --> BERT4ETH["BERT4ETH"]
+        ModelLoader --> RevTrack["RevTrack"]
+        ModelLoader --> Elliptic2["Elliptic2 (Placeholder)"]
+    end
+    
+    subgraph "Data Storage"
+        Database["Database"] --> AuditLogs["Audit Logs"]
+        Database --> CaseHistory["Case History"]
+        Database --> WalletTags["Wallet Tags"]
+        Database --> TrackingData["Tracking Data"]
+    end
+    
+    APIClient --> APIEndpoints
+    Services --> ModelLoader
+    Services --> Database
+    
+    subgraph "Input Methods"
+        SingleWallet["Single Wallet Address"] --> APIEndpoints
+        BulkUpload["Bulk Upload (CSV/List)"] --> APIEndpoints
+    end
+    
+    subgraph "Output"
+        ReportGeneration --> PDFReport["PDF Reports"]
+        ReportGeneration --> CSVReport["CSV Reports"]
+        ReportGeneration --> JSONReport["JSON Reports"]
+    end

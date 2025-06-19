@@ -1,0 +1,94 @@
+d:\CryptoSPY\                      # Root directory (already exists)
+├── models/                        # AI models directory (already exists)
+│   ├── BERT4ETH-master/           # BERT4ETH model (already exists)
+│   ├── RevTrack-main/             # RevTrack model (already exists)
+│   └── Elliptic2-main/            # Elliptic2 framework (already exists)
+├── app/                           # Main application directory
+│   ├── api/                       # API endpoints
+│   │   ├── __init__.py
+│   │   ├── blockchain.py          # Blockchain API routes
+│   │   ├── analysis.py            # Analysis API routes
+│   │   ├── reports.py             # Report generation routes
+│   │   └── audit.py               # Audit log routes
+│   ├── core/                      # Core application code
+│   │   ├── __init__.py
+│   │   ├── config.py              # Configuration settings
+│   │   ├── security.py            # Security utilities
+│   │   └── logging.py             # Logging utilities
+│   ├── db/                        # Database models and utilities
+│   │   ├── __init__.py
+│   │   ├── models.py              # Database models
+│   │   └── session.py             # Database session management
+│   ├── ml/                        # Machine learning integration
+│   │   ├── __init__.py
+│   │   ├── bert4eth.py            # BERT4ETH model integration
+│   │   ├── revtrack.py            # RevTrack model integration
+│   │   ├── elliptic2.py           # Elliptic2 placeholder module
+│   │   └── model_loader.py        # Mixed framework model loading utility
+│   ├── services/                  # Business logic services
+│   │   ├── __init__.py
+│   │   ├── blockchain/            # Blockchain services
+│   │   │   ├── __init__.py
+│   │   │   ├── ethereum.py        # Ethereum blockchain service
+│   │   │   ├── bitcoin.py         # Bitcoin blockchain service
+│   │   │   ├── bsc.py             # BSC blockchain service
+│   │   │   ├── solana.py          # Solana blockchain service
+│   │   │   ├── polygon.py         # Polygon blockchain service
+│   │   │   └── monero.py          # Monero blockchain service (if possible)
+│   │   ├── analysis/              # Analysis services
+│   │   │   ├── __init__.py
+│   │   │   ├── risk_scoring.py    # Risk scoring service
+│   │   │   ├── flow_analysis.py   # Flow graph analysis
+│   │   │   ├── timeline.py        # Timeline analysis
+│   │   │   └── heatmap.py         # Heatmap analysis
+│   │   ├── case_management.py     # Case management service
+│   │   ├── tagging.py             # Wallet tagging service
+│   │   ├── tracking.py            # Wallet tracking service
+│   │   └── reporting.py           # Report generation service
+│   ├── static/                    # Static files
+│   │   ├── css/                   # CSS files
+│   │   ├── js/                    # JavaScript files
+│   │   └── images/                # Image files
+│   ├── templates/                 # Jinja2 templates (if using)
+│   │   ├── base.html              # Base template
+│   │   ├── dashboard.html         # Dashboard template
+│   │   ├── analysis.html          # Analysis template
+│   │   └── reports.html           # Reports template
+│   ├── utils/                     # Utility functions
+│   │   ├── __init__.py
+│   │   ├── blockchain_utils.py    # Blockchain utilities
+│   │   ├── data_processing.py     # Data processing utilities
+│   │   └── visualization.py       # Visualization utilities
+│   └── main.py                    # FastAPI application entry point
+├── frontend/                      # Frontend code (if using React)
+│   ├── public/                    # Public assets
+│   ├── src/                       # Source code
+│   │   ├── components/            # React components
+│   │   ├── pages/                 # React pages
+│   │   ├── services/              # API services
+│   │   ├── utils/                 # Utility functions
+│   │   ├── App.js                 # Main App component
+│   │   └── index.js               # Entry point
+│   ├── package.json               # NPM package configuration
+│   └── README.md                  # Frontend README
+├── tests/                         # Test directory
+│   ├── __init__.py
+│   ├── api/                       # API tests
+│   ├── services/                  # Service tests
+│   └── ml/                        # ML integration tests
+├── data/                          # Data directory
+│   ├── raw/                       # Raw data
+│   ├── processed/                 # Processed data
+│   └── cases/                     # Case history data
+├── docs/                          # Documentation
+│   ├── api/                       # API documentation
+│   └── user_guide/                # User guide
+├── scripts/                       # Utility scripts
+│   ├── setup.py                   # Setup script
+│   └── data_import.py             # Data import script
+├── .env                           # Environment variables
+├── .gitignore                     # Git ignore file
+├── requirements.txt               # Python dependencies
+├── Dockerfile                     # Docker configuration
+├── docker-compose.yml             # Docker Compose configuration
+└── README.md                      # Project README
